@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select Tag Example</title>
+    </head>
+    <body>
+        <h1 id="q">Select Tag Example</h1>
+        <div class="out">
+
+        </div>
+        <script>
+            
+            //  a select tag
+            let element = document.getElementByTagName("h1");
+            console.log(element[0]);
+            //a select   classname
+            element = document.getElementsByClassName("myClass");
+            console.log(element);
+            //a select   id
+            element = document.getElementById("q");
+            console.log(element);
+            //a select   queryselector
+            element = document.querySelector("#q");
+            console.log(element);
+            //a select   queryselectorall
+            element = document.querySelectorAll("h1");
+            console.log(element);
+            //create    a new paragraph element
+            let paragraph = document.createElement("p");
+            paragraph.textContent = "This is a new paragraph.";
+            console.log(paragraph);
+            element.prepend(paragraph);
+
+        </script>
+    </body>
+</html>
