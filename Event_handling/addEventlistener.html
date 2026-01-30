@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>Event handling - addEventListener</title>
+    </head>
+    <body>
+      <h1>Event handling </h1>
+      <p>Using addEventListener to handle events        
+        </p>
+        <button id="myBtn">Click Me</button>
+        <p id="demo"></p>
+        <script>
+            document.getElementById("myBtn").addEventListener("click", function() {
+                document.getElementById("demo").innerHTML = "Time: " + Date();
+            });
+        </script>
+        </body>
+      
+                </html>

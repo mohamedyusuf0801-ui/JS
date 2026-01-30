@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Remove Element</title>
+        </head>
+    <body>
+        <h1>REMOVE ELEMENT EXAMPLE</h1>
+        <p id="para1">This is the first paragraph.</p>
+        <p id="para2">This is the second paragraph.</p>
+        <button type="button" onclick="removeElement();">REMOVE SECOND PARAGRAPH</button>
+        <script>
+            function removeElement() {
+                const element = document.getElementById("para2");//select the element
+                element.remove();
+            }
+        </script>
+     </body>
+</html>
