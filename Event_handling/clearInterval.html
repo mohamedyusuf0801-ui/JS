@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>clearInterval Example</title>
+        </head>
+    <body>
+        <h1>clearInterval Example</h1>
+        <button onclick="startInterval()">Start Alerts</button>
+        <button onclick="stopInterval()">Stop Alerts</button>
+        <p id="demo">Click "Start Alerts" to begin.</p>
+        <script>
+            var intervalID;
+
+            function myfunction() {
+                alert("Hello Friend");
+            }
+
+            function startInterval() {
+                intervalID = setInterval(myfunction, 5000);
+                document.getElementById("demo").innerHTML = "Alerts started. Click 'Stop Alerts' to stop.";
+            }
+
+            function stopInterval() {
+                clearInterval(intervalID);
+                document.getElementById("demo").innerHTML = "Alerts stopped.";
+            }
+        </script>
+    </body>
+</html>

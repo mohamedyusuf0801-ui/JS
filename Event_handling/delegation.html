@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Delegation – Add Item</title>
+
+    <!-- ===== CSS (Inside HTML) ===== -->
+    <style>
+        /* Page styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* List container */
+        #itemList {
+            width: 220px;
+            padding: 0;
+        }
+
+        /* List items */
+        #itemList li {
+            list-style: none;
+            padding: 10px;
+            margin: 6px 0;
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+
+        /* Hover effect */
+        #itemList li:hover {
+            background-color: #ddd;
+        }
+
+        /* Button styling */
+        #addItem {
+            margin-top: 10px;
+            padding: 8px 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Delegation – Add Item Example</h2>
+
+    <!-- Parent element -->
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <!-- Button -->
+    <button id="addItem" type="button">Add Item</button>
+
+    <!-- ===== JavaScript (Inside HTML) ===== -->
+    <script>
+        // Get parent list
+        const itemList = document.getElementById("itemList");
+
+        // Get button
+        const addItemBtn = document.getElementById("addItem");
+
+        /*
+         Event Delegation:
+         - Single click handler on <ul>
+         - Handles clicks for all <li> elements
+        */
+        itemList.addEventListener("click", function (event) {
+            if (event.target.tagName === "LI") {
+                event.target.style.backgroundColor = "lightgreen";
+                console.log("Clicked:", event.target.textContent);
+            }
+        });
+
+        /*
+         Add new item dynamically
+         - New items automatically inherit click behavior
+        */
+        addItemBtn.addEventListener("click", function () {
+            const newItem = document.createElement("li");
+            newItem.textContent = `Item ${itemList.children.length + 1}`;
+            itemList.appendChild(newItem);
+        });
+    </script>
+
+</body>
+</html>

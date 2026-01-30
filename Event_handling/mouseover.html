@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>Mouseover Event and Mouseout Event</title>
+    </head>
+    <body>
+      <h1>Mouseover Event and Mouseout Event</h1>
+        <div   id="box" style="width:200px;height:100px;border:1px solid blue;">
+            Move the mouse pointer over this box
+            </div>
+            <script>
+                const box = document.getElementById("box");
+
+                box.addEventListener("mouseover", function() {
+                    box.innerHTML = "Mouse is over me!";
+                });
+
+                box.addEventListener("mouseout", function() {
+                    box.innerHTML = "Mouse is out of me!";
+                });
+            </script>
+            </body>
+</html>
+
+
+
+
